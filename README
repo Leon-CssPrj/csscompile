@@ -1,0 +1,14 @@
+Intruduction
+    A css compile base framework using for sass and scss
+Install
+   npm install
+Build
+   npm run css
+Lint:
+   npm run css-lint
+Compile:
+   npm run css-compile
+Prefix:
+   npm run css-prefix
+Minify:
+   npm run css-minify
