@@ -1,0 +1,22 @@
+{
+  "name": "csscompile",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "css": "npm-run-all css-lint css-compile css-prefix css-minify",
+    "css-lint": "sass-lint -c .scss-lint.yml scss/*.scss -v -q",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/theme.scss dist/css/theme.css",
+    "css-prefix": "postcss --config build/postcss.config.js --replace dist/css/*.css",
+    "css-minify": "cleancss -O0 --source-map --source-map-inline-sources --output dist/css/theme.min.css dist/css/theme.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "clean-css-cli": "^4.1.6",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.1.0",
+    "sass-lint": "^1.10.2"
+  }
+}
